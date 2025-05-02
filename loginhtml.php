@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head> 
+<head>
   <title>Login</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -8,17 +8,11 @@
   <form action="login.php" method="POST">
     <h2>Login</h2>
     <label>Email:</label>
-    <input type="email" name="email" required >
-    <label> password</label>
+    <input type="email" name="email" required value="<?php echo isset($_COOKIE['email']) ? $_COOKIE['email'] : ''; ?>">
+    <label>Password:</label>
     <input type="password" name="password" required>
     <button type="submit">Login</button>
-    <a href="register.html"    class="btn-lin"  >Register   </a>
   </form>
-
-  <script src=index.js >  
-
-
-  </script>
 </body>
 </html>
 
